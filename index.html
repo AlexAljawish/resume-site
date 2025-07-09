@@ -1,16 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ahmad Aljawish – Resume</title>
   <link href="style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="theme-toggle">
+    <label>
+      <input type="checkbox" id="themeSwitch">
+      🌙 Dark Mode
+    </label>
+  </div>
+
   <div class="container">
     <h1>Ahmad Aljawish</h1>
     <p class="subtitle">BSc. Computer Science | Computer Engineering Technologist</p>
-
     <hr>
 
     <section>
@@ -83,8 +90,15 @@
 
     <section>
       <h2>Download Resume</h2>
-      <p><a href="Ahmad Aljawish-Resume .pdf" download>Click here to download my resume (PDF)</a></p>
+      <p><a href="Ahmad Aljawish-Resume .pdf" download class="download-btn">Download my resume (PDF)</a></p>
     </section>
   </div>
+
+  <script>
+    const toggle = document.getElementById("themeSwitch");
+    toggle.addEventListener("change", () => {
+      document.documentElement.setAttribute("data-theme", toggle.checked ? "dark" : "light");
+    });
+  </script>
 </body>
 </html>

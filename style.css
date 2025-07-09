@@ -1,102 +1,120 @@
-/* Reset default browser styles */
+:root {
+  --bg: #ffffff;
+  --text: #1f2937;
+  --card: #f3f4f6;
+  --accent: #2563eb;
+  --link-hover: #1e40af;
+}
+
+[data-theme='dark'] {
+  --bg: #111827;
+  --text: #f9fafb;
+  --card: #1f2937;
+  --accent: #60a5fa;
+  --link-hover: #93c5fd;
+}
+
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
-/* Basic layout and background */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  background: linear-gradient(to right, #f3f4f6, #ffffff);
-  color: #333;
-  padding: 40px 20px;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 50px 20px;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Container styling */
 .container {
   max-width: 900px;
   margin: auto;
-  background: #fff;
   padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+  background: var(--card);
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  transition: background 0.3s ease;
 }
 
-/* Header */
 h1 {
   font-size: 2.5rem;
-  color: #111827;
 }
 
 .subtitle {
   font-size: 1.2rem;
-  color: #4b5563;
-  margin-bottom: 20px;
+  color: var(--accent);
+  margin-bottom: 1rem;
 }
 
-/* Section spacing */
 section {
-  margin-top: 35px;
+  margin-top: 2rem;
 }
 
-/* Section headers */
 h2 {
   font-size: 1.5rem;
-  color: #1f2937;
-  margin-bottom: 12px;
-  border-bottom: 2px solid #e5e7eb;
-  padding-bottom: 6px;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.25rem;
 }
 
-/* Sub-headers */
 h3 {
-  font-size: 1.1rem;
-  color: #111827;
-  margin-top: 12px;
+  font-size: 1.2rem;
+  margin-top: 1rem;
 }
 
 em {
-  color: #6b7280;
   font-style: normal;
-  font-size: 0.95rem;
+  color: #888;
 }
 
-/* Lists */
 ul {
-  padding-left: 20px;
-  margin-top: 10px;
+  padding-left: 1.2rem;
+  margin-top: 0.5rem;
 }
 
 ul li {
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 }
 
-/* Links */
 a {
-  color: #2563eb;
+  color: var(--accent);
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 a:hover {
+  color: var(--link-hover);
   text-decoration: underline;
 }
 
-/* Download section */
-section:last-of-type a {
+.download-btn {
   display: inline-block;
-  margin-top: 10px;
   padding: 10px 16px;
-  background-color: #2563eb;
+  background-color: var(--accent);
   color: white;
-  border-radius: 6px;
-  font-weight: bold;
+  font-weight: 600;
+  border-radius: 8px;
+  margin-top: 10px;
   transition: background 0.3s ease;
 }
 
-section:last-of-type a:hover {
-  background-color: #1e40af;
+.download-btn:hover {
+  background-color: var(--link-hover);
+}
+
+/* Dark mode toggle */
+.theme-toggle {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  z-index: 999;
+  font-size: 0.95rem;
+}
+
+.theme-toggle input {
+  transform: scale(1.2);
+  margin-right: 5px;
 }
 
 /* Responsive */
