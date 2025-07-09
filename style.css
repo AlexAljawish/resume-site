@@ -1,0 +1,119 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic layout and background */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(to right, #f3f4f6, #ffffff);
+  color: #333;
+  padding: 40px 20px;
+}
+
+/* Container styling */
+.container {
+  max-width: 900px;
+  margin: auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Header */
+h1 {
+  font-size: 2.5rem;
+  color: #111827;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #4b5563;
+  margin-bottom: 20px;
+}
+
+/* Section spacing */
+section {
+  margin-top: 35px;
+}
+
+/* Section headers */
+h2 {
+  font-size: 1.5rem;
+  color: #1f2937;
+  margin-bottom: 12px;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 6px;
+}
+
+/* Sub-headers */
+h3 {
+  font-size: 1.1rem;
+  color: #111827;
+  margin-top: 12px;
+}
+
+em {
+  color: #6b7280;
+  font-style: normal;
+  font-size: 0.95rem;
+}
+
+/* Lists */
+ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+/* Links */
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Download section */
+section:last-of-type a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 16px;
+  background-color: #2563eb;
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+section:last-of-type a:hover {
+  background-color: #1e40af;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+}
